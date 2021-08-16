@@ -4,10 +4,13 @@ import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+    //val FirebaseDatabase
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +20,11 @@ class MainActivity : AppCompatActivity() {
             val intentoRegistro = Intent(this,RegistrarseActivity::class.java)
             startActivity(intentoRegistro)
         }
-        //
-
+        //Boton logear
+        botonLogin.setOnClickListener{
+            val intentPrincipal = Intent(this,PrincipalCliente::class.java)
+            startActivity(intentPrincipal)
+        }
 
     }
 
@@ -33,10 +39,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun mensaje(entrada:String){
         val builder = AlertDialog.Builder( this)
-        var email = entrada
+        var texto = entrada
         //val builder= AlertDialog.Builder(context:this)
         builder.setTitle("Hasta aqui")
-        builder.setMessage(email)
+        builder.setMessage(texto)
         builder.setPositiveButton("Aceptar",null)
         val dialog: AlertDialog=builder.create()
         dialog.show()
