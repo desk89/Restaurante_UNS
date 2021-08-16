@@ -1,15 +1,10 @@
 package com.example.restauranteuns.modelos
+import com.google.firebase.database.IgnoreExtraProperties
 
-  class Usuario {
-    var id: String=""
-    var nombre: String
-    var contraseña: String
-    var tipo: String
+@IgnoreExtraProperties
+  data class Usuario(val id: String,val nombre: String,val email: String
+                     ,val contraseña: String) {
 
-      constructor(nombre: String,contraseña: String,tipo: String){
-        this.nombre=nombre
-          this.contraseña=contraseña
-          this.tipo=tipo
-      }
+
 
 }
