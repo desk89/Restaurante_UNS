@@ -36,7 +36,7 @@
             android:text="Ingrese su Email:" />
 
         <EditText
-            android:id="@+id/editEmail"
+            android:id="@+id/editEmailLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -53,7 +53,7 @@
             android:text="Ingrese su Contraseña:" />
 
         <EditText
-            android:id="@+id/editPassword"
+            android:id="@+id/editPasswordLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -66,10 +66,10 @@
             android:text="Logearse" />
 
         <Button
-            android:id="@+id/botonRegistrarse"
+            android:id="@+id/botonRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registrarse" />
+            android:text="Registro" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

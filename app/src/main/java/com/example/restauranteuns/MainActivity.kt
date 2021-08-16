@@ -1,6 +1,7 @@
 package com.example.restauranteuns
 
 import android.app.AlertDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -11,9 +12,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        botonRegistrarse.setOnClickListener {
-
+        //Boton registro
+        botonRegistro.setOnClickListener {
+            val intentoRegistro = Intent(this,RegistrarseActivity::class.java)
+            startActivity(intentoRegistro)
         }
+        //
+
+
     }
 
     private fun alerta(){
