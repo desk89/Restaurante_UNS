@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_constraintBottom_toBottomOf="parent"
-        android:layout_constraintEnd_toEndOf="parent"
-        android:layout_constraintStart_toStartOf="parent"
-        android:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical">
+    android:layout_height="600dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/linear_cliente">
+
         <TextView
             android:id="@+id/preguntapedido"
             android:layout_width="400sp"
@@ -42,11 +39,13 @@
             android:textColor="@color/colorPrimaryDark"
             />
         <EditText
+            android:id="@+id/costo"
             android:layout_width="200sp"
             android:layout_height="50sp"
-            android:hint="0000"
+            android:ems="10"
             android:gravity="left"
-            android:textSize="25sp"/>
+            android:inputType="textPersonName"
+            />
 
         </LinearLayout>
 
@@ -289,16 +288,24 @@
 
 
         </LinearLayout>
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
         <Button
+            android:id="@+id/continuar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="continuar">
+            android:layout_height="wrap_content"
+            android:text="continuar"
+            android:textColor="@color/colorPrimary">
 
         </Button>
-
-
-
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

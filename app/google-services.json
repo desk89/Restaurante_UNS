@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "866811215189",
+    "project_id": "proyecto-mirko",
+    "storage_bucket": "proyecto-mirko.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866811215189:android:dd7c5c666ad4a47ac203dc",
+        "android_client_info": {
+          "package_name": "com.example.restauranteuns"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866811215189-r5vr194vhrog3oka4t4vaj7f0s3qbdfl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.restauranteuns",
+            "certificate_hash": "f3321fe9f4b3532398488978bbe03ca2a14bc270"
+          }
+        },
+        {
+          "client_id": "866811215189-hm6ja6spte33729e5f6v19cvmv9k4n6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMn-ZmY_ZxsCe1tT8CK4xZnekXItjGPUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866811215189-hm6ja6spte33729e5f6v19cvmv9k4n6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
