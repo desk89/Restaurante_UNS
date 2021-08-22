@@ -4,26 +4,36 @@ import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.restauranteuns.modelos.Usuario
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_registrarse.*
 
 class RegistrarseActivity : AppCompatActivity() {
-
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrarse)
-
         //Boton Registrar persona
         botonRegistrarse.setOnClickListener {
             if (editNombreRegist.text.isNotEmpty()&&editEmailRegist.text.isNotEmpty()
                 &&editContraseñaRegist.text.isNotEmpty()){
-                //mensaje("tus campos estan llenos")
-                registrarNuevoUsuario()
+                var tipo=1
+                var latitud=1
+                var longitud=1
+                //Creo mi usuario
+                db.collection("usuarios").document(editEmailRegist.text.toString()).set(
+                    hashMapOf("nombre" to editNombreRegist.text.toString(),
+                        "email" to editEmailRegist.text.toString(),
+                        "contraseña" to editContraseñaRegist.text.toString(),
+                        "tipo" to tipo.toString(),
+                        "direccion" to editDireccionRegist.text.toString(),
+                        "latitud" to latitud.toString(),
+                        "longitud" to longitud.toString())
+                )
+                //Devolver al login
+                val intentoLogin= Intent(this,MainActivity::class.java)
+                startActivity(intentoLogin)
             }else{
                 mensaje("Te falto llenar un campo")
             }
@@ -34,7 +44,6 @@ class RegistrarseActivity : AppCompatActivity() {
             startActivity(intentoLogin)
         }
     }
-
 
     private fun mensaje(entrada:String){
         val builder = AlertDialog.Builder( this)
@@ -47,11 +56,4 @@ class RegistrarseActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun registrarNuevoUsuario(){
-        var id="1"
-        val usuario = Usuario(id,editNombreRegist.text.toString(),editEmailRegist.text.toString(),
-        editContraseñaRegist.text.toString())
-
-        //db.child("usuarios").child(id).setValue(usuario)
-    }
 }

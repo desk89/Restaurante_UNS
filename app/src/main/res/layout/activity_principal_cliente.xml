@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <Button
-        android:id="@+id/botonCTracking"
+        android:id="@+id/botonTrackingCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tracking"

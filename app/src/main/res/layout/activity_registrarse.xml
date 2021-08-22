@@ -58,7 +58,7 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ingrese su Contraseña:" />
@@ -69,6 +69,19 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingrese su Direccion:" />
+
+        <EditText
+            android:id="@+id/editDireccionRegist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/botonRegistrarse"
