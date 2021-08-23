@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         //Boton logear
         botonLogin.setOnClickListener{
             //Busca el email y si existe -> me deja entrar al principal
+
+
             db.collection("usuarios").document(editEmailLog.text.toString()).get().addOnSuccessListener {
                 startActivity(Intent(this,PrincipalCliente::class.java).putExtra(
                     "emailLogin",editEmailLog.text.toString()
