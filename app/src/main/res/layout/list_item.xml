@@ -26,19 +26,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cliente :"
+                android:text="Usuario :"
                 android:textColor="@color/black"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvcliente"
+                android:id="@+id/tvusuario"
                 android:layout_marginStart="8dp"
                 android:text="ari"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
 
 
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:text="Plato :"
                 android:textColor="@color/black"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <TextView
@@ -68,7 +68,7 @@
                 android:layout_marginStart="8dp"
                 android:text="pollo"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
 
             <TextView
@@ -77,7 +77,7 @@
                 android:text="Cantidad :"
                 android:textColor="@color/black"
                 android:layout_marginStart="8dp"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <TextView
@@ -87,7 +87,7 @@
                 android:layout_marginStart="8dp"
                 android:text="ari"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
 
         </LinearLayout>
@@ -102,9 +102,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tptañ :"
+                android:text="Total :"
                 android:textColor="@color/black"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <TextView
@@ -114,7 +114,7 @@
                 android:layout_marginStart="8dp"
                 android:text="30"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
 
             <TextView
@@ -123,7 +123,7 @@
                 android:text="Track :"
                 android:textColor="@color/black"
                 android:layout_marginStart="8dp"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <TextView
@@ -133,11 +133,20 @@
                 android:layout_marginStart="8dp"
                 android:text="ari"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
         </LinearLayout>
 
 
+
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/map_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_baseline_map_24"></ImageView>
 
 </androidx.cardview.widget.CardView>

@@ -3,6 +3,7 @@ package com.example.restauranteuns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,7 +19,7 @@ class MyAdapter(private val pediList: ArrayList<Pedido>): RecyclerView.Adapter<M
     override fun onBindViewHolder(holder: MyAdapter.MyViewHolder, position: Int) {
         val pedido : Pedido = pediList[position]
         holder.cantidad.text = pedido.cantidad
-        holder.cliente.text = pedido.cliente
+        holder.usuario.text = pedido.usuario
         holder.plato.text = pedido.plato
         holder.total.text = pedido.total.toString()
         holder.nroTracking.text = pedido.nroTracking.toString()
@@ -32,10 +33,13 @@ class MyAdapter(private val pediList: ArrayList<Pedido>): RecyclerView.Adapter<M
 
 
     public class MyViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
-        val cliente :TextView = itemView.findViewById(R.id.tvcliente)
+        val usuario :TextView = itemView.findViewById(R.id.tvusuario)
         val plato : TextView = itemView.findViewById(R.id.tvplato)
         val total : TextView = itemView.findViewById(R.id.tvtotal)
-        val cantidad : TextView = itemView.findViewById((R.id.tvcantidad))
+        val cantidad : TextView = itemView.findViewById(R.id.tvcantidad)
         val nroTracking : TextView = itemView.findViewById(R.id.tvtracking)
+        val boton_map : ImageView = itemView.findViewById(R.id.map_button)
+
+
     }
 }
