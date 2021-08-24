@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "806301072685",
+    "firebase_url": "https://restaurante-uns-default-rtdb.firebaseio.com",
+    "project_id": "restaurante-uns",
+    "storage_bucket": "restaurante-uns.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806301072685:android:83c5744101aa22d9c567a4",
+        "android_client_info": {
+          "package_name": "com.example.restauranteuns"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806301072685-uq7e6v77mgl7bfh0d53m58lt4ij9b6mj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0iV2resrKR0hxAygTA-Lf_zGaDhGeWIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806301072685-uq7e6v77mgl7bfh0d53m58lt4ij9b6mj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
