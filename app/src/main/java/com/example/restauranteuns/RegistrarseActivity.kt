@@ -40,15 +40,13 @@ class RegistrarseActivity : AppCompatActivity() {
         }
         //Boton voler al login
         botonVolver.setOnClickListener {
-            val intentoLogin= Intent(this,MainActivity::class.java)
-            startActivity(intentoLogin)
+            startActivity(Intent(this,MainActivity::class.java))
         }
     }
 
     private fun mensaje(entrada:String){
         val builder = AlertDialog.Builder( this)
         var texto = entrada
-        //val builder= AlertDialog.Builder(context:this)
         builder.setTitle("Hasta aqui")
         builder.setMessage(texto)
         builder.setPositiveButton("Aceptar",null)

@@ -11,7 +11,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     val db = Firebase.firestore
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,24 +21,26 @@ class MainActivity : AppCompatActivity() {
         //Boton logear
         botonLogin.setOnClickListener{
             //Busca el email y si existe -> me deja entrar al principal
-
-
-            db.collection("usuarios").document(editEmailLog.text.toString()).get().addOnSuccessListener {
-                startActivity(Intent(this,PrincipalCliente::class.java).putExtra(
-                    "emailLogin",editEmailLog.text.toString()
-                ))
+            if(editEmailLog.text.toString()=="diego@gmail.com"){
+                db.collection("usuarios").document(editEmailLog.text.toString()).get().addOnSuccessListener {
+                    startActivity(Intent(this,PrincipalCliente::class.java).putExtra(
+                        "emailLogin",editEmailLog.text.toString()
+                    ))
             }
+        }else{
+            if (editEmailLog.text.toString().isNotEmpty()){
+                db.collection("usuarios").document(editEmailLog.text.toString()).get().addOnSuccessListener {
+                    startActivity(Intent(this,PrincipalCliente::class.java).putExtra(
+                        "emailLogin",editEmailLog.text.toString()
+                    ))
+                }
+            }else{
+                mensaje("Ingresa tu correo")
+            }
+
         }
 
     }
-
-    private fun alerta(){
-        val builder = AlertDialog.Builder( this)
-        builder.setTitle("Error")
-        builder.setMessage("Hubo un error")
-        builder.setPositiveButton("Aceptar",null)
-        val dialog: AlertDialog=builder.create()
-        dialog.show()
     }
 
     private fun mensaje(entrada:String){

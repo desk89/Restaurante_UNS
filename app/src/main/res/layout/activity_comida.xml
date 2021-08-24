@@ -9,7 +9,7 @@
     tools:context=".ComidaActivity">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textoDeseas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¿Que desea pedir?"
@@ -38,13 +38,13 @@
 
     <EditText
         android:id="@+id/editCantidadComidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintHorizontal_bias="0.289"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.145" />
