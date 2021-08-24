@@ -17,9 +17,11 @@ class MyAdapter(private val pediList: ArrayList<Pedido>): RecyclerView.Adapter<M
 
     override fun onBindViewHolder(holder: MyAdapter.MyViewHolder, position: Int) {
         val pedido : Pedido = pediList[position]
+        holder.cantidad.text = pedido.cantidad
         holder.cliente.text = pedido.cliente
         holder.plato.text = pedido.plato
         holder.total.text = pedido.total.toString()
+        holder.nroTracking.text = pedido.nroTracking.toString()
 
 
     }
@@ -33,5 +35,7 @@ class MyAdapter(private val pediList: ArrayList<Pedido>): RecyclerView.Adapter<M
         val cliente :TextView = itemView.findViewById(R.id.tvcliente)
         val plato : TextView = itemView.findViewById(R.id.tvplato)
         val total : TextView = itemView.findViewById(R.id.tvtotal)
+        val cantidad : TextView = itemView.findViewById((R.id.tvcantidad))
+        val nroTracking : TextView = itemView.findViewById(R.id.tvtracking)
     }
 }
