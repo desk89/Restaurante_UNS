@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         botonRegistro.setOnClickListener {
             startActivity(Intent(this,RegistrarseActivity::class.java))
         }
+
         //Boton logear
         botonLogin.setOnClickListener{
             //Busca el email y si existe -> me deja entrar al principal
