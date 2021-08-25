@@ -29,7 +29,8 @@ class ComidaActivity : AppCompatActivity() {
                     "cantidad" to cantidad,
                     "precioUnitario" to precio,
                     "total" to total,
-                    "nroTracking" to nro)
+                    "nroTracking" to nro,
+                    "repartidor" to "anghelo@gmail.com")
             )
             startActivity(Intent(this,GenerarTrackingActivity::class.java).putExtra(
                 "nro",nro.toString()
@@ -48,7 +49,8 @@ class ComidaActivity : AppCompatActivity() {
                     "cantidad" to cantidad,
                     "precioUnitario" to precio,
                     "total" to total,
-                    "nroTracking" to nro)
+                    "nroTracking" to nro,
+                    "repartidor" to "anghelo@gmail.com")
             )
             startActivity(Intent(this,GenerarTrackingActivity::class.java).putExtra(
                 "nro",nro.toString()))
@@ -66,13 +68,16 @@ class ComidaActivity : AppCompatActivity() {
                     "cantidad" to cantidad,
                     "precioUnitario" to precio,
                     "total" to total,
-                    "nroTracking" to nro)
+                    "nroTracking" to nro,
+                    "repartidor" to "anghelo@gmail.com")
             )
             startActivity(Intent(this,GenerarTrackingActivity::class.java).putExtra(
                 "nro",nro.toString()))
         }
 
     }
+
+    //Funcion para generar valores aleatorios
     fun valorRandom(valores: IntRange) : Int {
         var r = Random()
         var valorRandom = r.nextInt(valores.last - valores.first) + valores.first

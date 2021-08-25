@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             //Busca el email y si existe -> me deja entrar al principal
             if(editEmailLog.text.toString()=="diego@gmail.com"){
                 db.collection("usuarios").document(editEmailLog.text.toString()).get().addOnSuccessListener {
-                    startActivity(Intent(this,PrincipalCliente::class.java).putExtra(
+                    startActivity(Intent(this,Repartidor::class.java).putExtra(
                         "emailLogin",editEmailLog.text.toString()
                     ))
             }
