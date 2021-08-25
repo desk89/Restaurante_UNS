@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         botonLogin.setOnClickListener{
             //Busca el email y si existe -> me deja entrar al principal
             if(editEmailLog.text.toString()=="diego@gmail.com"){
+                var latitudR = 1
+                var longitudR = 1
+
                 db.collection("usuarios").document(editEmailLog.text.toString()).get().addOnSuccessListener {
                     startActivity(Intent(this,Repartidor::class.java).putExtra(
                         "emailLogin",editEmailLog.text.toString()

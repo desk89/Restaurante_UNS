@@ -18,18 +18,14 @@ class RegistrarseActivity : AppCompatActivity() {
         botonRegistrarse.setOnClickListener {
             if (editNombreRegist.text.isNotEmpty()&&editEmailRegist.text.isNotEmpty()
                 &&editContraseñaRegist.text.isNotEmpty()){
-                var tipo=1
-                var latitud=1
-                var longitud=1
+
                 //Creo mi usuario
                 db.collection("usuarios").document(editEmailRegist.text.toString()).set(
                     hashMapOf("nombre" to editNombreRegist.text.toString(),
                         "email" to editEmailRegist.text.toString(),
                         "contraseña" to editContraseñaRegist.text.toString(),
-                        "tipo" to tipo.toString(),
-                        "direccion" to editDireccionRegist.text.toString(),
-                        "latitud" to latitud.toString(),
-                        "longitud" to longitud.toString())
+                        "direccion" to editDireccionRegist.text.toString()
+                        )
                 )
                 //Devolver al login
                 val intentoLogin= Intent(this,MainActivity::class.java)
