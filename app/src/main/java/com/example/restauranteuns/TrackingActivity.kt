@@ -12,8 +12,8 @@ class TrackingActivity : AppCompatActivity() {
 
 
         btn_verificarcodigo.setOnClickListener{
-            startActivity(Intent(this,OrderListActivity::class.java).putExtra
-                ("nro",et_codigo.text.toString()))
+            startActivity(Intent(this,MapActivity::class.java).putExtra
+                ("tracking",et_codigo.text.toString()))
         }
     }
 }

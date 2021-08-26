@@ -10,8 +10,8 @@
         android:id="@+id/btn_ubicacion"
         android:layout_width="112dp"
         android:layout_height="113dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/effect_location_button"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,14 +44,97 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_pedidos" />
 
-    <ListView
-        android:id="@+id/d_lista"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="209dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="112dp"
+        android:text="Plato:"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_detalle" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_pedidos" />
+
+
+    <TextView
+        android:id="@+id/textoPlato"
+        android:layout_width="204dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="328dp"
+        android:text="plato"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="209dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="284dp"
+        android:text="Cantidad:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textoCantidad"
+        android:layout_width="206dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="240dp"
+        android:text="cantidad"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="213dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="192dp"
+        android:text="Total:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textoTotal"
+        android:layout_width="210dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="148dp"
+        android:text="total"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textoNro"
+        android:layout_width="211dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="104dp"
+        android:text="Tracking"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

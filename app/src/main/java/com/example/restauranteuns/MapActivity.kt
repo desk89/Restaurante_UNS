@@ -153,7 +153,7 @@ class MapActivity : AppCompatActivity() ,OnMapReadyCallback {
             longitud=it.get("longitudCl") as Double
             latitudR=it.get("latitudR") as Double
             longitudR=it.get("longitudR") as Double
-            Toast.makeText(this, "UBICACIÓN: ${latitud}, ${longitud}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "UBICACIÓN: ${latitudR}, ${longitudR}", Toast.LENGTH_SHORT).show()
             ruta(latitud,longitud,latitudR,longitudR)
         }
 

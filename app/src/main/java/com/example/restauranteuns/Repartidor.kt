@@ -22,24 +22,13 @@ class Repartidor : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_repartidor)
-
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
-
-
         pedArrayList = arrayListOf()
-
         myAdapter = MyAdapter(pedArrayList)
-
         recyclerView.adapter = myAdapter
-
-
         EvenChangeListener()
-
-        boton_mapaRepartidor.setOnClickListener {
-            startActivity(Intent(this,MapRepartidorActivity::class.java))
-        }
     }
 
     private fun EvenChangeListener() {

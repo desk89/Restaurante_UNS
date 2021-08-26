@@ -1,12 +1,9 @@
 package com.example.restauranteuns
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -36,18 +33,12 @@ class ComidaActivity : AppCompatActivity() {
             var total:Int = 20 * editCantidadComidad.text.toString().toInt()
             var nro= valorRandom(1000..9999999)
             db.collection("pedidos").document(nro.toString()).set(
-                hashMapOf("usuario" to email,
-                    "plato" to plato,
-                    "cantidad" to cantidad,
-                    "precioUnitario" to precio,
-                    "total" to total,
-                    "nroTracking" to nro,
+                hashMapOf("usuario" to email,"plato" to plato,"cantidad" to cantidad,
+                    "precioUnitario" to precio,"total" to total,"nroTracking" to nro,
                     "repartidor" to "diego@gmail.com"))
-                        pedirPermisos(nro.toString())
-
-                        startActivity(Intent(this,GenerarTrackingActivity::class.java).putExtra(
-                            "nro",nro.toString()
-                        ))
+                pedirPermisos(nro.toString())
+                startActivity(Intent(this,GenerarTrackingActivity::class.java).putExtra(
+                            "nro",nro.toString()))
         }
 
 
@@ -58,14 +49,10 @@ class ComidaActivity : AppCompatActivity() {
             var total:Int = 15 * editCantidadComidad.text.toString().toInt()
             var nro= valorRandom(1000..9999999)
             db.collection("pedidos").document(nro.toString()).set(
-                hashMapOf("usuario" to email,
-                    "plato" to plato,
-                    "cantidad" to cantidad,
-                    "precioUnitario" to precio,
-                    "total" to total,
-                    "nroTracking" to nro,
-                    "repartidor" to "anghelo@gmail.com")
-            )
+                hashMapOf("usuario" to email,"plato" to plato,"cantidad" to cantidad,
+                    "precioUnitario" to precio,"total" to total,"nroTracking" to nro,
+                    "repartidor" to "diego@gmail.com"))
+            pedirPermisos(nro.toString())
             startActivity(Intent(this,GenerarTrackingActivity::class.java).putExtra(
                 "nro",nro.toString()))
         }
@@ -77,14 +64,10 @@ class ComidaActivity : AppCompatActivity() {
             var total:Int = 18 * editCantidadComidad.text.toString().toInt()
             var nro= valorRandom(1000..9999999)
             db.collection("pedidos").document(nro.toString()).set(
-                hashMapOf("usuario" to email,
-                    "plato" to plato,
-                    "cantidad" to cantidad,
-                    "precioUnitario" to precio,
-                    "total" to total,
-                    "nroTracking" to nro,
-                    "repartidor" to "anghelo@gmail.com")
-            )
+                hashMapOf("usuario" to email,"plato" to plato,"cantidad" to cantidad,
+                    "precioUnitario" to precio,"total" to total,"nroTracking" to nro,
+                    "repartidor" to "diego@gmail.com"))
+            pedirPermisos(nro.toString())
             startActivity(Intent(this,GenerarTrackingActivity::class.java).putExtra(
                 "nro",nro.toString()))
         }
@@ -98,7 +81,8 @@ class ComidaActivity : AppCompatActivity() {
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION) !=PackageManager.PERMISSION_GRANTED)
                 {
-                    ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),101)
+                    ActivityCompat.requestPermissions(this,
+                        arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),101)
                     return
 
                 }
@@ -109,8 +93,8 @@ class ComidaActivity : AppCompatActivity() {
                 db.collection("vistaTracking").document(nro).set(
                     hashMapOf("latitudCl" to latitudCl,
                                 "longitudCl" to longitudCl,
-                                "longitudR" to -9.10422841233709,
-                                "latitudR" to -78.55359487109443)
+                                "latitudR" to -9.119681868738962,
+                                "longitudR" to  -78.5135890952766)
                 )
                 Toast.makeText(applicationContext, "${it.latitude}${it.longitude}", Toast.LENGTH_SHORT).show()
             }

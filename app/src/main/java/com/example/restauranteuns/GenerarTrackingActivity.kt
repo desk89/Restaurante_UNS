@@ -16,6 +16,7 @@ class GenerarTrackingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_generar_tracking)
         val trackingIntent: Intent=intent
         var tracking = trackingIntent.getStringExtra("nro")
+        //Sobreescribimos el texto para mostrar el tracking
         textoTracking.text=tracking
 
         botonVolverInicio.setOnClickListener {
