@@ -145,6 +145,8 @@ class MapActivity : AppCompatActivity() ,OnMapReadyCallback,GoogleMap.OnMyLocati
         ruta(ubicacion.latitude,ubicacion.longitude)
     }
     private fun ruta(lat:Double,log:Double){
+
+
         var linea = PolylineOptions()
             .add(LatLng(-9.074637339287742, -78.59365732809074))
             .add(LatLng(lat,log))
@@ -153,4 +155,14 @@ class MapActivity : AppCompatActivity() ,OnMapReadyCallback,GoogleMap.OnMyLocati
             .width(5f)
         val poliLinea=mapa.addPolyline(linea)
     }
+
+    private fun llamarDB(nro: String){
+        var lat: Double
+        var log: Double
+        db.collection("vistaTracking").document(nro).get().addOnSuccessListener {
+
+        }
+
+    }
+
 }
