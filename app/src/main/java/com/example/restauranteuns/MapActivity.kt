@@ -30,7 +30,7 @@ class MapActivity : AppCompatActivity() ,OnMapReadyCallback {
         tv_ubicacionmapa.text=nroTrack
         Fragmento1()
         btn_vlista.setOnClickListener{
-            val intent4: Intent = Intent(this,OrderListActivity::class.java)
+            val intent4: Intent = Intent(this,MainActivity::class.java)
             startActivity(intent4)
         }
 

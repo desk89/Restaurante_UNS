@@ -20,7 +20,7 @@ class GenerarTrackingActivity : AppCompatActivity() {
         textoTracking.text=tracking
 
         botonVolverInicio.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,PrincipalCliente::class.java))
         }
 
     }

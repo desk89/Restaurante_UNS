@@ -74,6 +74,7 @@ class ComidaActivity : AppCompatActivity() {
 
     }
 
+
     private fun pedirPermisos(nro: String) {
         val task = fusedLocationClient.lastLocation
 

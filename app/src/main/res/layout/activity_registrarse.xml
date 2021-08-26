@@ -83,16 +83,26 @@
             android:ems="10"
             android:inputType="textPersonName" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="19dp" />
+
         <Button
             android:id="@+id/botonRegistrarse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/effect_style_button"
             android:text="Registrarse" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
 
         <Button
             android:id="@+id/botonVolver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/effect_style_button"
             android:text="Volver" />
 
     </LinearLayout>
