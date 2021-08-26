@@ -59,16 +59,26 @@
             android:ems="10"
             android:inputType="textPassword" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+
         <Button
             android:id="@+id/botonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/effect_style_button"
             android:text="Logearse" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="27dp" />
 
         <Button
             android:id="@+id/botonRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/effect_style_button"
             android:text="Registro" />
 
     </LinearLayout>

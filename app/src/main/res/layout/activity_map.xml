@@ -7,14 +7,30 @@
     tools:context=".MapActivity">
 
 
+    <Button
+        android:id="@+id/btn_actualizar"
+        android:layout_width="162dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/effect_style_button"
+        android:text="actualizar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.978"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <fragment
         android:id="@+id/mapa"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="80dp"
         android:paddingBottom="5dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_vlista"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_ubicacionmapa"
         app:layout_constraintVertical_bias="1.0"
-        tools:context=".MapsActivity" />
+        tools:context=".MapActivity" />
 
     <TextView
         android:id="@+id/tv_ubicacionmapa"
@@ -40,8 +56,8 @@
 
     <Button
         android:id="@+id/btn_vlista"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="162dp"
+        android:layout_height="43dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="24dp"

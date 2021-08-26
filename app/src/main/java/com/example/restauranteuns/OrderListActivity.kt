@@ -8,9 +8,15 @@ class OrderListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order_list)
+
+        val nroIntent: Intent=intent
+        var numero = nroIntent.getStringExtra("nro")
+        tv_pedidos.text=numero
+
         btn_ubicacion.setOnClickListener{
-            val intent3: Intent = Intent(this,MapActivity::class.java)
-            startActivity(intent3)
+            startActivity(Intent(this,MapActivity::class.java).putExtra(
+                "tracking",numero
+            ))
         }
     }
 }

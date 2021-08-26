@@ -32,7 +32,7 @@ class PrincipalCliente : AppCompatActivity() {
         }
 
         botonTrackingCliente.setOnClickListener {
-            startActivity(Intent(this,MapActivity::class.java)
+            startActivity(Intent(this,TrackingActivity::class.java)
             )
         }
 

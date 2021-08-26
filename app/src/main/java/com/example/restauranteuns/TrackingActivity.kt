@@ -9,9 +9,11 @@ class TrackingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tracking)
+
+
         btn_verificarcodigo.setOnClickListener{
-            val intent2: Intent = Intent(this,OrderListActivity::class.java)
-            startActivity(intent2)
+            startActivity(Intent(this,OrderListActivity::class.java).putExtra
+                ("nro",et_codigo.text.toString()))
         }
     }
 }
