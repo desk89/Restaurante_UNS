@@ -38,8 +38,7 @@ class MyAdapter(private val pediList: ArrayList<Pedido>): RecyclerView.Adapter<M
         val total : TextView = itemView.findViewById(R.id.tvtotal)
         val cantidad : TextView = itemView.findViewById(R.id.tvcantidad)
         val nroTracking : TextView = itemView.findViewById(R.id.tvtracking)
-        val boton_map : ImageView = itemView.findViewById(R.id.map_button)
-
+        val boton_mapa: ImageView = itemView.findViewById(R.id.boton_mapaRepartidor)
 
     }
 }

@@ -1,44 +1,37 @@
 package com.example.restauranteuns
 
 import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.activity_map.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.*
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolylineOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_map.*
 
-class MapActivity : AppCompatActivity() ,OnMapReadyCallback {
+class MapRepartidorActivity : AppCompatActivity(), OnMapReadyCallback {
     val db = Firebase.firestore
     private lateinit var nroTrack: String
     private lateinit var mapa: GoogleMap
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_map)
-        val trackingIntent: Intent=intent
-        nroTrack = trackingIntent.getStringExtra("tracking").toString()
-        tv_ubicacionmapa.text=nroTrack
+        setContentView(R.layout.activity_map_repartidor)
         Fragmento1()
-        btn_vlista.setOnClickListener{
-            val intent4: Intent = Intent(this,OrderListActivity::class.java)
-            startActivity(intent4)
-        }
 
-        btn_actualizar.setOnClickListener {
-            llamarDB(nroTrack)
-        }
+
 
     }
+
     private fun Fragmento1() {
         val mFragmento = supportFragmentManager
             .findFragmentById(R.id.mapa) as SupportMapFragment
@@ -158,4 +151,6 @@ class MapActivity : AppCompatActivity() ,OnMapReadyCallback {
         }
 
     }
+
+
 }

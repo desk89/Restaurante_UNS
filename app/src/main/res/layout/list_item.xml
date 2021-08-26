@@ -142,7 +142,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/map_button"
+        android:id="@+id/boton_mapaRepartidor"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="end"

@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RestauranteUNS">
-        <activity android:name=".TrackingActivity"></activity>
+        <activity android:name=".MapRepartidorActivity"></activity>
+        <activity android:name=".TrackingActivity" />
         <activity android:name=".OrderListActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".Repartidor" />
